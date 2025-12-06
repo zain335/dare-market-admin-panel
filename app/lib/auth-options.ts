@@ -26,7 +26,7 @@ export const authOptions: NextAuthOptions = {
         try {
           const { email, password } = credentials;
 
-          if (email === "admin@dare.live" && password === "admin") {
+          if (email === "admin@dare.market" && password === "admin") {
             return {
               id: email,
               email: email,

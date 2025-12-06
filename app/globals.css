@@ -6,12 +6,14 @@
 @tailwind utilities;
 
 .main-layout {
+
   /* Apply styles for the main layout here */
   /* For example, setting no scrollbar */
   ::-webkit-scrollbar {
     display: none;
   }
 }
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -49,25 +51,30 @@
     /* Custom font and color variables for dark theme */
     --font-anonymous-pro: "Anonymous Pro", monospace;
     --font-dm-mono: "DM Mono", monospace;
-    --color-primary: #39FF14;
+    --color-primary: #FF0037;
     --color-secondary: #ffffff;
     --color-dark: #000000;
-    
+
     /* Dark theme with lime green accents */
-    --background: 0 0% 0%; /* Pure black background */
-    --foreground: 0 0% 100%; /* Pure white text */
+    --background: 0 0% 0%;
+    /* Pure black background */
+    --foreground: 0 0% 100%;
+    /* Pure white text */
     --foreground-light: 0 0% 70%;
     --foreground-lighter: 0 0% 13%;
 
-    --card: 0 0% 5%; /* Very dark cards */
+    --card: 0 0% 5%;
+    /* Very dark cards */
     --card-foreground: 0 0% 100%;
 
     --popover: 0 0% 5%;
     --popover-foreground: 0 0% 100%;
 
     /* Lime green primary colors */
-    --primary: 82 100% 54%; /* #39FF14 lime green */
-    --primary-foreground: 0 0% 0%; /* Black text on lime */
+    --primary: hsl(347, 100%, 50%);
+    /* #FF0037 lime green */
+    --primary-foreground: 0 0% 0%;
+    /* Black text on lime */
 
     --secondary: 0 0% 10%;
     --secondary-foreground: 0 0% 100%;
@@ -75,17 +82,22 @@
     --muted: 0 0% 8%;
     --muted-foreground: 0 0% 60%;
 
-    --accent: 82 100% 54%; /* Lime green accent */
+    --accent: hsl(347, 100%, 50%);
+    /* Lime green accent */
     --accent-foreground: 0 0% 0%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 15%; /* Darker borders */
-    --input: 0 0% 8%; /* Dark input backgrounds */
-    --ring: 82 100% 54%; /* Lime green focus ring */
+    --border: 0 0% 15%;
+    /* Darker borders */
+    --input: 0 0% 8%;
+    /* Dark input backgrounds */
+    --ring: hsl(347, 100%, 50%);
+    /* Lime green focus ring */
 
-    --radius: 0rem; /* Sharp corners like the original design */
+    --radius: 0rem;
+    /* Sharp corners like the original design */
   }
 }
 
@@ -93,34 +105,35 @@
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
-  
+
   /* Dark theme specific styles */
   .dark {
     font-family: "Anonymous Pro", monospace;
   }
-  
+
   /* Custom scrollbar styles for dark theme only */
   .dark ::-webkit-scrollbar {
     width: 2px;
     height: 2px;
   }
-  
+
   .dark ::-webkit-scrollbar-track {
     background: transparent;
   }
-  
+
   .dark ::-webkit-scrollbar-thumb {
     background: var(--color-secondary);
     border-radius: 3px;
   }
-  
+
   .dark ::-webkit-scrollbar-thumb:hover {
     background: #cccccc;
   }
-  
+
   /* Firefox scrollbar styles for dark theme only */
   .dark * {
     scrollbar-width: thin;
@@ -131,9 +144,11 @@
 .w-top-bar-lg {
   width: calc(100% - 56px);
 }
+
 .w-top-bar-sm {
   width: calc(100% - 312px);
 }
+
 .h-page-screen {
   height: calc(100vh - 48px);
 }
@@ -151,13 +166,15 @@
   /* border-radius: 0.375rem !important; */
   /* font-size: 0.875rem !important; text-sm */
   /* font-weight: 500 !important; font-medium */
-  transition: colors 150ms ease-in-out !important; 
+  transition: colors 150ms ease-in-out !important;
   white-space: nowrap !important;
 }
 
 .wallet-adapter-button-trigger {
-  padding: 0.5rem 1rem !important; /* h-9 px-4 py-0 equivalent */
-  height: 2.25rem !important; /* h-9 */
+  padding: 0.5rem 1rem !important;
+  /* h-9 px-4 py-0 equivalent */
+  height: 2.25rem !important;
+  /* h-9 */
   background: hsl(var(--primary) / 0.9) !important;
   border: none !important;
   color: inherit !important;
@@ -171,39 +188,43 @@
 }
 
 .wallet-adapter-button:not([disabled]):hover {
-  background: hsl(var(--primary) / 0.8) !important; /* hover:bg-primary/80 */
+  background: hsl(var(--primary) / 0.8) !important;
+  /* hover:bg-primary/80 */
 }
 
 .wallet-adapter-button:focus-visible {
   outline: none !important;
-  box-shadow: 0 0 0 1px hsl(var(--ring)) !important; /* focus-visible:ring-1 focus-visible:ring-ring */
+  box-shadow: 0 0 0 1px hsl(var(--ring)) !important;
+  /* focus-visible:ring-1 focus-visible:ring-ring */
 }
 
 .wallet-adapter-button:disabled {
   pointer-events: none !important;
-  opacity: 0.5 !important; /* disabled:opacity-50 */
+  opacity: 0.5 !important;
+  /* disabled:opacity-50 */
 }
 
 /* Dark theme button overrides for lime green theme */
 .dark .bg-primary {
-  background-color: #39FF14 !important;
-  color: #000000 !important; /* Black text on lime background */
+  background-color: #FF0037 !important;
+  color: #000000 !important;
+  /* Black text on lime background */
 }
 
 .dark .text-primary {
-  color: #39FF14 !important;
+  color: #FF0037 !important;
 }
 
 .dark .border-primary {
-  border-color: #39FF14 !important;
+  border-color: #FF0037 !important;
 }
 
 /* Dark theme form inputs with lime accents */
 .dark input:focus,
 .dark textarea:focus,
 .dark select:focus {
-  border-color: #39FF14 !important;
-  box-shadow: 0 0 0 1px #39FF14 !important;
+  border-color: #FF0037 !important;
+  box-shadow: 0 0 0 1px #FF0037 !important;
 }
 
 /* Dark theme badge overrides */
@@ -213,7 +234,7 @@
 
 .dark .text-green-600,
 .dark .text-green-800 {
-  color: #39FF14 !important;
+  color: #FF0037 !important;
 }
 
 .dark .border-green-200 {
