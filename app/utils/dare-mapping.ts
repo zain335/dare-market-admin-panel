@@ -29,6 +29,7 @@ export const mapBackendDareStateToItem = (
     isTokenless: dareState.isTokenless,
     dareStatePublicKey: dareState.isTokenless ? dareState.tokenMint : undefined,
     isFeatured: dareState.dbDare.isFeatured,
+    dbDare: dareState.dbDare,
   };
 
   return dareItem;

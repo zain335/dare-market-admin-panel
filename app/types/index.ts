@@ -58,6 +58,7 @@ export type DareItem = {
   isTokenless?: boolean;
   dareStatePublicKey?: string;
   isFeatured?: boolean;
+  dbDare?: BackendDbDare;
 };
 
 /**
