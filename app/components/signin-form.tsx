@@ -82,7 +82,7 @@ export default function SignInForm() {
     <Card className="w-[484px]">
       <CardHeader>
         <CardTitle className="text-2xl text-center py-2">
-          Welcome to Dare.live Admin Portal
+          Welcome to Dare.market Admin Portal
         </CardTitle>
         <CardDescription className="text-foreground-light">
           Sign in to your account

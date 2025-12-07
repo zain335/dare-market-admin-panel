@@ -68,7 +68,7 @@ const SideNavDrawer: React.FC<PropsWithChildren<SideNavDrawerProps>> = ({
 
               <div className="flex flex-col">
                 <p className="text-md text-foreground px-5 font-bold">
-                  Dare.live
+                  Dare.market
                 </p>
                 <p className="text-md text-foreground px-5"> Admin Portal</p>
               </div>
@@ -96,11 +96,10 @@ const SideNavDrawer: React.FC<PropsWithChildren<SideNavDrawerProps>> = ({
                       <Button
                         variant={"outline"}
                         size={"sm"}
-                        className={`w-full justify-start ${
-                          selectedBtn === data.id
+                        className={`w-full justify-start ${selectedBtn === data.id
                             ? "bg-foreground/10"
                             : "bg-background"
-                        }`}
+                          }`}
                         onClick={() => setSelectedBtn(data.id)}
                       >
                         {data.icon && getIcon(data.icon)}
